@@ -1,2 +1,3 @@
 # geesefs-flake
-flake for geesefs by tigrisdata
+
+flake for geesefs by tigrisdata/yandex-cloud
