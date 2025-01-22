@@ -23,8 +23,8 @@
         rev = "v${version}";
         sha256 = "sha256-LAokE7cvlYEHfWO7WJlTbfn5MguzGvNaH5kAuGV+0rI=";
       };
-    in {
-      packages.default = pkgs.buildGo122Module {
+
+      geesefs = pkgs.buildGo122Module {
         inherit pname version src;
         vendorHash = "sha256-7a0sjl24mIXYo4Ws8GUefo1YRwc80P0Lcmcj5uQ+f50=";
         subPackages = ["."]; # Only build main package
@@ -37,5 +37,8 @@
           mainProgram = "geesefs";
         };
       };
+    in {
+      packages.default = geesefs;
+      overlays.default = final: prev: {inherit geesefs;};
     });
 }
