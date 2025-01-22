@@ -16,7 +16,7 @@
         config.allowUnfree = true;
       };
       pname = "geesefs";
-      version = "0.42.0";
+      version = "0.42.0-tigris1";
       src = pkgs.fetchFromGitHub {
         owner = "tigrisdata";
         repo = pname;
